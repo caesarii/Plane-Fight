@@ -9,9 +9,10 @@ class GameLabel extends GameObject {
 
 
     draw() {
-        var score = this.score
-        this.context.fillStyle = 'orange'
-        this.context.fillText(`分数： ${score}`, 10, 580)
+        const score = this.score
+        this.game.drawText(`分数： ${score}`, 10, 580, {color: 'orange'})
+        // this.context.fillStyle = 'orange'
+        // this.context.fillText()
     }
 
     update() {

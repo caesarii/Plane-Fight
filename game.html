@@ -83,11 +83,11 @@
         </div>
     <script src=main.js></script>
     <script>
-        var es = sel => document.querySelectorAll(sel)
-        var bindAll = function(sel, eventName, callback) {
-            var l = es(sel)
-            for(var i = 0; i < l.length; i++) {
-                var input = l[i]
+        const es = sel => document.querySelectorAll(sel)
+        const bindAll = function(sel, eventName, callback) {
+            const l = es(sel)
+            for(let i = 0; i < l.length; i++) {
+                const input = l[i]
                 input.addEventListener(eventName, function(event) {
                     callback(event)
                 })
@@ -95,11 +95,11 @@
         }
 
         bindAll('.gua-auto-slider', 'input', function(event) {
-            var target = event.target
-            var bindVar = target.dataset.value
-            var v = target.value
+            const target = event.target
+            const bindVar = target.dataset.value
+            const v = target.value
             eval(bindVar + "=" + v)
-            var label = target.closest('label').querySelector('.gua-label')
+            const label = target.closest('label').querySelector('.gua-label')
             label.innerText = v
 
         })

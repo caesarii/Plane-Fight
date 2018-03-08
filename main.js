@@ -48,6 +48,7 @@ const __main = function() {
     }
     const game = Game.new(30, images, function(g){
         const s = new SceneTitle(g)
+        log('scene',s, s.draw)
         g.loadScene(s)
     })
 
